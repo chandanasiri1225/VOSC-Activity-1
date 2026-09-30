@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient LED / Neon Background Effect -->
+  <div class="led-bg-dots" aria-hidden="true"></div>
+  <div class="neon-ambient-glow" aria-hidden="true"></div>
+
+  <main class="game-container">
+    <header class="game-header">
+      <h1 class="game-title">Tic-Tac-Toe</h1>
+      <p class="game-subtitle">Choose a game mode and take turns placing your mark to get 3 in a row!</p>
+    </header>
+
+    <section class="mode-selection" aria-label="Game Mode Selection">
+      <button id="two-player-btn" class="mode-btn active" type="button">Two Player</button>
+      <button id="vs-robo-btn" class="mode-btn" type="button">Play vs Robo</button>
+    </section>
+
+    <!-- Scoreboard Section -->
+    <section class="scoreboard-section" aria-label="Scoreboard">
+      <div class="score-card x-score">
+        <span class="score-label" id="x-label">Player 1 (X)</span>
+        <span class="score-value" id="x-score">0</span>
+      </div>
+      <div class="score-card draw-score">
+        <span class="score-label">Draws</span>
+        <span class="score-value" id="draw-score">0</span>
+      </div>
+      <div class="score-card o-score">
+        <span class="score-label" id="o-label">Player 2 (O)</span>
+        <span class="score-value" id="o-score">0</span>
+      </div>
+    </section>
+
+    <section class="status-section" aria-live="polite">
+      <p id="status-message" class="status-message">Player 1's Turn — X</p>
+    </section>
+
+    <section class="board-section" aria-label="Tic-Tac-Toe Board">
+      <div id="board" class="board">
+        <button class="cell" type="button" data-index="0" aria-label="Cell 1"></button>
+        <button class="cell" type="button" data-index="1" aria-label="Cell 2"></button>
+        <button class="cell" type="button" data-index="2" aria-label="Cell 3"></button>
+        <button class="cell" type="button" data-index="3" aria-label="Cell 4"></button>
+        <button class="cell" type="button" data-index="4" aria-label="Cell 5"></button>
+        <button class="cell" type="button" data-index="5" aria-label="Cell 6"></button>
+        <button class="cell" type="button" data-index="6" aria-label="Cell 7"></button>
+        <button class="cell" type="button" data-index="7" aria-label="Cell 8"></button>
+        <button class="cell" type="button" data-index="8" aria-label="Cell 9"></button>
+      </div>
+    </section>
+
+    <footer class="controls-section">
+      <button id="restart-btn" class="restart-btn" type="button">Restart Game</button>
+      <button id="reset-score-btn" class="reset-score-btn" type="button">Reset Score</button>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
